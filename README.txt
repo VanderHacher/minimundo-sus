@@ -1,16 +1,16 @@
-Mini-Mundo 4:
-  O SUS está interessado em controlar os pacientes internados, e seus atendimentos, nos seus hospitais. 
+ï»¿Mini-Mundo 4:
+  O SUS estÃ¡ interessado em controlar os pacientes internados, e seus atendimentos, nos seus hospitais. 
 Quando uma pessoa credenciada junto ao SUS passa mal, ela se dirige a um dos hospitais e se consulta 
-com algum médico. Dependendo da gravidade o(s) médico(s) pode(m) decidir pela internação. 
-Os pacientes, pessoas credenciadas que foram internadas, podem receber atendimento de vários médicos 
-e enfermeiras durante o período de internação. Não há interesse em controlar as pessoas que não foram internadas, nem as consultas antes da internação.
-Cada empregado do SUS (médico ou enfermeira) só pode estar vinculado a no máximo 3 hospitais. 
-Não se admite um empregado com mais de um vínculo no mesmo hospital. Não há interesse em controlar 
-as datas em que ocorreram os atendimentos. Há necessidade de se conseguir as seguintes informações:
+com algum mÃ©dico. Dependendo da gravidade o(s) mÃ©dico(s) pode(m) decidir pela internaÃ§Ã£o. 
+Os pacientes, pessoas credenciadas que foram internadas, podem receber atendimento de vÃ¡rios mÃ©dicos 
+e enfermeiras durante o perÃ­odo de internaÃ§Ã£o. NÃ£o hÃ¡ interesse em controlar as pessoas que nÃ£o foram internadas, nem as consultas antes da internaÃ§Ã£o.
+Cada empregado do SUS (mÃ©dico ou enfermeira) sÃ³ pode estar vinculado a no mÃ¡ximo 3 hospitais. 
+NÃ£o se admite um empregado com mais de um vÃ­nculo no mesmo hospital. NÃ£o hÃ¡ interesse em controlar 
+as datas em que ocorreram os atendimentos. HÃ¡ necessidade de se conseguir as seguintes informaÃ§Ãµes:
 
-a) Relação dos pacientes (nome, código do seguro social, idade) internados num hospital juntamente 
-   com os nomes e números dos médicos responsáveis por cada internação, e o período de internação.
-b) Relação dos médicos e enfermeiras (nome, matricula) que trabalham determinado hospital.
-c) Relação dos médicos (nome, matrícula, especialidade) e enfermeiras (nome, matrícula, cargo) 
-   que deram atendimento a um paciente durante uma internação.
-d) Relação dos hospitais (nome, código e endereço) que um médico ou enfermeira mantém vínculo.
+a) RelaÃ§Ã£o dos pacientes (nome, cÃ³digo do seguro social, idade) internados num hospital juntamente 
+   com os nomes e nÃºmeros dos mÃ©dicos responsÃ¡veis por cada internaÃ§Ã£o, e o perÃ­odo de internaÃ§Ã£o.
+b) RelaÃ§Ã£o dos mÃ©dicos e enfermeiras (nome, matricula) que trabalham determinado hospital.
+c) RelaÃ§Ã£o dos mÃ©dicos (nome, matrÃ­cula, especialidade) e enfermeiras (nome, matrÃ­cula, cargo) 
+   que deram atendimento a um paciente durante uma internaÃ§Ã£o.
+d) RelaÃ§Ã£o dos hospitais (nome, cÃ³digo e endereÃ§o) que um mÃ©dico ou enfermeira mantÃ©m vÃ­nculo.
