@@ -22,6 +22,7 @@ public class BEmpregado extends BBase{
         EmpregadoDAO.inserir(empregado);
     }
 
+
     public void vincularEmpregadoHospital(Empregado empregado, Hospital hospital) throws Exception{
 
         int qtdeVinculo = 0;
@@ -43,10 +44,10 @@ public class BEmpregado extends BBase{
                    if (qtdeVinculo == 3)
                         throw new Exception("Empregado pode ter no máximo 3 vínculos");
                }
-            }
-
-            hospital.getEmpregados().add(empregado);            
+            }                        
         }
+
+        hospital.getEmpregados().add(empregado);
     }
 
 }

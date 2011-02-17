@@ -42,9 +42,11 @@ public class MainTest {
      */
     @Test
     public void testMain() throws Exception {
-        System.out.println("main");
-        String[] args = null;
+        String[] args = null ;
+
         Main.main(args);
+
+        System.out.print("1");
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

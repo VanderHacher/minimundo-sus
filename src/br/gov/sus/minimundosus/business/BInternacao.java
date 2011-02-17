@@ -15,12 +15,9 @@ import br.gov.sus.minimundosus.persistence.PacienteDAO;
  */
 public class BInternacao extends BBase{
 
-    public void incluirPaciente(Paciente paciente){
-        PacienteDAO.inserir(paciente);
-    }
-
-    public void incluirInternacao(Internacao internacao){
+    public void incluirInternacao(Internacao internacao, Hospital hospital){
         InternacaoDAO.inserir(internacao);
+        hospital.getInternacoes().add(internacao);
     }
 
     public void incluirMedicoInternacao(Medico medico, Internacao internacao){

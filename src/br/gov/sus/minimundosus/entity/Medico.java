@@ -13,6 +13,8 @@ public class Medico extends Empregado {
 
     private String especialidade;
 
+    public Medico(){}
+
     public String getEspecialidade() {
         return especialidade;
     }

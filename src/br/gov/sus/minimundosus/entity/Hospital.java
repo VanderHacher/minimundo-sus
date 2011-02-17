@@ -17,8 +17,10 @@ public class Hospital {
     private int codigo;
     private String nome;
     private String endereco;
-    List<Empregado> empregados = new ArrayList<Empregado>();
-    List<Internacao> internacoes = new ArrayList<Internacao>();
+    private List<Empregado> empregados = new ArrayList<Empregado>();
+    private List<Internacao> internacoes = new ArrayList<Internacao>();
+
+    public Hospital(){}
 
     public int getCodigo() {
         return codigo;

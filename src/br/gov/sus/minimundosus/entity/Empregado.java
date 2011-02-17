@@ -13,6 +13,8 @@ public abstract class Empregado extends Pessoa{
 
     private int matricula;
 
+    public Empregado(){}
+
     public int getMatricula() {
         return matricula;
     }

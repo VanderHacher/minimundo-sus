@@ -16,10 +16,14 @@ import java.util.List;
 public class Internacao {
 
     private int codigo;
+    private Paciente paciente;
     private Date dataInicio;
     private Date dataFim;
-    List<Enfermeiro> enfermeiros = new ArrayList<Enfermeiro>();
-    List<Medico> medicos = new ArrayList<Medico>();
+
+    private List<Enfermeiro> enfermeiros = new ArrayList<Enfermeiro>();
+    private List<Medico> medicos = new ArrayList<Medico>();
+
+    public Internacao(){}
 
     public int getCodigo() {
         return codigo;
@@ -27,6 +31,14 @@ public class Internacao {
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
 
     public Date getDataFim() {

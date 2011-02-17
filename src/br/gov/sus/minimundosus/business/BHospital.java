@@ -19,5 +19,8 @@ public class BHospital extends BBase{
         HospitalDAO.inserir(hospital);
     }
 
+    public Hospital getHospital(int codigo){
+        return HospitalDAO.getHospital(codigo);
+    }
   
 }

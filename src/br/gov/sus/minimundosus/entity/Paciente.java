@@ -12,7 +12,8 @@ package br.gov.sus.minimundosus.entity;
 public class Paciente extends Pessoa{
 
     private int codigoSeguroSocial;
-    private Internacao[] internacao;
+
+    public Paciente(){}
 
     public int getCodigoSeguroSocial() {
         return codigoSeguroSocial;
@@ -22,12 +23,6 @@ public class Paciente extends Pessoa{
         this.codigoSeguroSocial = codigoSeguroSocial;
     }
 
-    public Internacao[] getInternacao() {
-        return internacao;
-    }
 
-    public void setInternacao(Internacao[] internacao) {
-        this.internacao = internacao;
-    }
 
 }

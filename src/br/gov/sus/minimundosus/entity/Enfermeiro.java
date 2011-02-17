@@ -13,6 +13,8 @@ public class Enfermeiro extends Empregado{
 
     private String cargo;
 
+    public Enfermeiro(){}
+
     public String getCargo() {
         return cargo;
     }

@@ -18,9 +18,10 @@ public class BBase {
         return EmpregadoDAO.getEmpregado(matricula);
     }
     
-    public Hospital getHospital(int codigo){
-        return HospitalDAO.getHospital(codigo);
-    }
 
+
+    public Paciente getPaciente(int codigo){
+        return PacienteDAO.getPaciente(codigo);
+    }
 
 }
