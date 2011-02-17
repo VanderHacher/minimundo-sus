@@ -13,16 +13,17 @@ import java.util.List;
 /**
  *
  * @author Ricardo
+ * Esta classe é um Mock para persistence em banco de dados
  */
-public class DALHospital {
+public class HospitalDAO {
 
-    List<Hospital> hospitais = new ArrayList<Hospital>();
+    private static List<Hospital> hospitais = new ArrayList<Hospital>();
 
-    public void Inserir(Hospital hospital){
+    public static void inserir(Hospital hospital){
         hospitais.add(hospital);
     }
 
-    public Hospital getHospital(int codigo){
+    public static Hospital getHospital(int codigo){
         for (Iterator<Hospital> it = hospitais.iterator(); it.hasNext();) {
             Hospital hospital = it.next();
             if (hospital.getCodigo() == codigo)
@@ -31,7 +32,7 @@ public class DALHospital {
         return null;
     }
 
-    public List<Hospital> List(){
+    public static List<Hospital> list(){
         return hospitais;
     }
 }

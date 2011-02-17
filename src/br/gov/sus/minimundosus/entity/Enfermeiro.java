@@ -9,7 +9,7 @@ package br.gov.sus.minimundosus.entity;
  *
  * @author Ricardo
  */
-public class Enfermeira extends Empregado{
+public class Enfermeiro extends Empregado{
 
     private String cargo;
 

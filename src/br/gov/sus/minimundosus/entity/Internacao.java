@@ -18,7 +18,7 @@ public class Internacao {
     private int codigo;
     private Date dataInicio;
     private Date dataFim;
-    List<Enfermeira> enfermeiros = new ArrayList<Enfermeira>();
+    List<Enfermeiro> enfermeiros = new ArrayList<Enfermeiro>();
     List<Medico> medicos = new ArrayList<Medico>();
 
     public int getCodigo() {
@@ -45,11 +45,11 @@ public class Internacao {
         this.dataInicio = dataInicio;
     }
 
-    public List<Enfermeira> getEnfermeiros() {
+    public List<Enfermeiro> getEnfermeiros() {
         return enfermeiros;
     }
 
-    public void setEnfermeiros(List<Enfermeira> enfermeiros) {
+    public void setEnfermeiros(List<Enfermeiro> enfermeiros) {
         this.enfermeiros = enfermeiros;
     }
 

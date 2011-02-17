@@ -11,14 +11,14 @@ package br.gov.sus.minimundosus.entity;
  */
 public class Paciente extends Pessoa{
 
-    private String codigoSeguroSocial;
+    private int codigoSeguroSocial;
     private Internacao[] internacao;
 
-    public String getCodigoSeguroSocial() {
+    public int getCodigoSeguroSocial() {
         return codigoSeguroSocial;
     }
 
-    public void setCodigoSeguroSocial(String codigoSeguroSocial) {
+    public void setCodigoSeguroSocial(int codigoSeguroSocial) {
         this.codigoSeguroSocial = codigoSeguroSocial;
     }
 
