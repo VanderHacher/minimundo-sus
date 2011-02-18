@@ -5,7 +5,6 @@
 
 package br.gov.sus.minimundosus.persistence;
 
-import br.gov.sus.minimundosus.entity.Empregado;
 import br.gov.sus.minimundosus.entity.Internacao;
 import java.util.ArrayList;
 import java.util.Iterator;

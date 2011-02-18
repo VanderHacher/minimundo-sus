@@ -16,12 +16,15 @@ import java.util.Iterator;
  *
  * @author Ricardo
  */
-public class BEmpregado extends BBase{
+public class BEmpregado {
 
     public void incluirEmpregado(Empregado empregado){
         EmpregadoDAO.inserir(empregado);
     }
 
+    public Empregado getEmpregado(int matricula){
+        return EmpregadoDAO.getEmpregado(matricula);
+    }
 
     public void vincularEmpregadoHospital(Empregado empregado, Hospital hospital) throws Exception{
 
@@ -49,5 +52,6 @@ public class BEmpregado extends BBase{
 
         hospital.getEmpregados().add(empregado);
     }
+
 
 }
