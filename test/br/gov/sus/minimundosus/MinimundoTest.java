@@ -11,7 +11,7 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.DateFormat;
 import br.gov.sus.minimundosus.business.*;
-import br.gov.sus.minimundosus.entity.*;
+import br.gov.sus.minimundosus.model.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
