@@ -7,10 +7,6 @@ package br.gov.sus.minimundosus.model;
 
 import java.util.Date;
 
-/**
- *
- * @author Ricardo
- */
 public abstract class Pessoa {
 
     private int cpf;

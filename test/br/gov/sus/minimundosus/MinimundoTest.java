@@ -5,6 +5,8 @@
 
 package br.gov.sus.minimundosus;
 
+import java.util.List;
+import java.util.ArrayList;
 import java.text.ParseException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -306,56 +308,46 @@ public class MinimundoTest {
         Internacao.getInternacao(2).incluirEnfermeiroInternacao((Enfermeiro)Empregado.getEmpregado(5));
         assertTrue(Internacao.getInternacao(2).getEnfermeiros().contains((Enfermeiro)Empregado.getEmpregado(5)));
 
-
     }
 
-    /**
-    * Teste de listar os pacientes internados em um hospital
-    */
     @Test
-    public void testListPacienteInternadoHospital() {
+    public void testListarPacienteInternadoHospital() {
 
         Hospital hospital = Hospital.getHospital(1);
 
-        assertTrue(hospital.listPacienteInternado(), )
-        
-        bPaciente.listPacienteInternadoHospital(hospital);
+        List<Paciente> listPaciente = new ArrayList<Paciente>();
+        assertTrue(hospital.listPacienteInternado().getClass().equals(listPaciente.getClass()));
+   
     }
 
-//    /**
-//    * Teste de listar os médicos e enfermeiros de um hospital
-//    */
-//    @Test
-//    public void testListMedicoEnfermeiroHospital() {
-//
-//        Hospital hospital = bHospital.getHospital(1);
-//
-//        bHospital.listMedicoEnfermeiro(hospital);
-//    }
-//
-//    /**
-//    * Teste de listar os médicos e enfermeiros de uma internação
-//    */
-//    @Test
-//    public void testListMedicoEnfermeiroInternacao() {
-//        Internacao internacao = bInternacao.getInternacao(2);
-//
-//        bInternacao.listMedicoEnfermeiro(internacao);
-//    }
-//
-//    /**
-//    * Teste de listar os hospitais que o empregado mantém vínculo
-//    */
-//    @Test
-//    public void testListHospitalEmpregadoVinculado() {
-//
-//        Empregado empregado = bEmpregado.getEmpregado(1);
-//
-//        bHospital.listHospitalEmpregadoVinculado(empregado);
-//    }
-//
+    @Test
+    public void testListarMedicoEnfermeiroDeUmHospital() {
 
+        Hospital hospital = Hospital.getHospital(1);
 
+        List<Empregado> listEmpregado = new ArrayList<Empregado>();
+        assertTrue(hospital.listMedicoEnfermeiro().getClass().equals(listEmpregado.getClass()));
 
+    }
+
+    @Test
+    public void testListMedicoEnfermeiroInternacao() {
+
+        Internacao internacao = Internacao.getInternacao(1);
+
+        List<Empregado> listEmpregado = new ArrayList<Empregado>();
+        assertTrue(internacao.listMedicoEnfermeiro().getClass().equals(listEmpregado.getClass()));
+
+    }
+
+    @Test
+    public void testListHospitalEmpregadoVinculado() {
+
+        Empregado empregado = Empregado.getEmpregado(1);
+
+        List<Hospital> listHospital = new ArrayList<Hospital>();
+        assertTrue(empregado.listHospitalEmpregadoVinculado().getClass().equals(listHospital.getClass()));
+   
+    }
 
 }

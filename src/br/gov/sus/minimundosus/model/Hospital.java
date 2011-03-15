@@ -121,22 +121,7 @@ public class Hospital {
         hospital.getEmpregados().add(empregado);
     }
 
-    public void listHospitalEmpregadoVinculado(Empregado emp){
 
-        for (Iterator<Hospital> h = Hospital.list().iterator(); h.hasNext();) {
-            Hospital hospital = h.next();
-
-            for (Iterator<Empregado> e = hospital.getEmpregados().iterator(); e.hasNext();) {
-                Empregado empregado = e.next();
-
-                if (empregado.equals(emp)){
-                    System.out.printf("\n");
-                    System.out.printf("Nome: %s\n", hospital.getNome());
-                    System.out.printf("Endereço: %s\n", hospital.getEndereco());
-                }
-            }
-        }
-    }
 
     public void inserirInternacao(Internacao internacao){
         internacoes.add(internacao);

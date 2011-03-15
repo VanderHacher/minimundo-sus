@@ -29,7 +29,6 @@ public abstract class Empregado extends Pessoa{
     }
 
 
-
     public static void inserir(Empregado empregado){
         empregados.add(empregado);
     }
@@ -47,6 +46,23 @@ public abstract class Empregado extends Pessoa{
         return empregados;
     }
 
-  
+     public List<Hospital> listHospitalEmpregadoVinculado(){
+
+        List<Hospital> listHospital = new ArrayList<Hospital>();
+
+        for (Iterator<Hospital> h = Hospital.list().iterator(); h.hasNext();) {
+            Hospital hospital = h.next();
+
+            for (Iterator<Empregado> e = hospital.getEmpregados().iterator(); e.hasNext();) {
+                Empregado empregado = e.next();
+
+                if (empregado.equals(this)){
+                    listHospital.add(hospital);
+                }
+            }
+        }
+
+        return listHospital;
+    }
 
 }
