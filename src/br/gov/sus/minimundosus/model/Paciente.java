@@ -31,8 +31,8 @@ public class Paciente extends Pessoa{
 
    private static List<Paciente> pacientes = new ArrayList<Paciente>();
 
-    public static void inserir(Paciente empregado){
-        pacientes.add(empregado);
+    public static void inserir(Paciente paciente){
+        pacientes.add(paciente);
     }
 
     public static Paciente getPaciente(int codigoSeguroSocial){

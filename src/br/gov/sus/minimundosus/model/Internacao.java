@@ -91,29 +91,30 @@ public class Internacao {
     public static List<Internacao> list(){
         return internacoes;
     }
-   public void incluirInternacao(Internacao internacao, Hospital hospital){
+
+    public void incluirInternacao(Internacao internacao, Hospital hospital){
         internacoes.add(internacao);
         hospital.getInternacoes().add(internacao);
     }
 
-    public void incluirMedicoInternacao(Medico medico, Internacao internacao){
-        internacao.getMedicos().add(medico);
+    public void incluirMedicoInternacao(Medico medico){
+        medicos.add(medico);
     }
 
-    public void incluirEnfermeiroInternacao(Enfermeiro enfermeiro, Internacao internacao){
-        internacao.getEnfermeiros().add(enfermeiro);
+    public void incluirEnfermeiroInternacao(Enfermeiro enfermeiro){
+        enfermeiros.add(enfermeiro);
     }
 
-    public void listMedicoEnfermeiro(Internacao internacao){
+    public void listMedicoEnfermeiro(){
 
         System.out.printf("Relação de Médicos e Enfermeiros que deram atendimento a Internação\n");
 
         System.out.printf("\n");
 
-         System.out.printf("Paciente: %s\n", internacao.getPaciente().getNome());
+         System.out.printf("Paciente: %s\n", this.getPaciente().getNome());
 
         System.out.printf("Médicos:\n");
-        for (Iterator<Medico> m = internacao.getMedicos().iterator(); m.hasNext();) {
+        for (Iterator<Medico> m = medicos.iterator(); m.hasNext();) {
             Medico medico = m.next();
             System.out.printf(" Nome: %s", medico.getNome());
             System.out.printf(" - Matrícula: %s", medico.getMatricula());
@@ -123,7 +124,7 @@ public class Internacao {
         System.out.printf("\n");
 
         System.out.printf("Enfermeiros:\n");
-        for (Iterator<Enfermeiro> e = internacao.getEnfermeiros().iterator(); e.hasNext();) {
+        for (Iterator<Enfermeiro> e = enfermeiros.iterator(); e.hasNext();) {
             Enfermeiro enfermeiro = e.next();
             System.out.printf(" Nome: %s", enfermeiro.getNome());
             System.out.printf(" - Matrícula: %s", enfermeiro.getMatricula());

@@ -81,21 +81,47 @@ public class Hospital {
         return hospitais;
     }
 
-    public void listMedicoEnfermeiro(Hospital hospital){
+    public List<Empregado> listMedicoEnfermeiro(){
+        return empregados;
+    }
 
-        System.out.printf("Relação de Médicos e Enfermeiros\n");
-        System.out.printf("\n");
-
-        for (Iterator<Empregado> e = hospital.getEmpregados().iterator(); e.hasNext();) {
-            Empregado empregado = e.next();
-            System.out.printf("Nome: %s - Matrícula: %d\n", empregado.getNome(), empregado.getMatricula());
-
+    public List<Paciente> listPacienteInternado(){
+        List<Paciente> pacientes = new ArrayList<Paciente>();
+        for (Iterator<Internacao> e = internacoes.iterator(); e.hasNext();) {
+               Internacao internacao = e.next();
+               pacientes.add(internacao.getPaciente());
         }
+        return pacientes;
+    }
+
+    public static void vincularEmpregadoHospital(Empregado empregado, Hospital hospital) throws Exception{
+
+        int qtdeVinculo = 0;
+
+        for (Iterator<Hospital> h = Hospital.list().iterator(); h.hasNext();) {
+            Hospital hosp = h.next();
+
+            for (Iterator<Empregado> e = hosp.getEmpregados().iterator(); e.hasNext();) {
+               Empregado emp = e.next();
+               //Verifica se já existe a associação
+               if (hosp.equals(hospital) && emp.equals(empregado)){
+                    throw new Exception("Empregado já associado a este hospital");
+               }
+
+               //Contabiliza se já existe 3 vínculos com hospitais
+               if (emp.equals(empregado)){
+                   qtdeVinculo++;
+
+                   if (qtdeVinculo == 3)
+                        throw new Exception("Empregado pode ter no máximo 3 vínculos");
+               }
+            }
+        }
+
+        hospital.getEmpregados().add(empregado);
     }
 
     public void listHospitalEmpregadoVinculado(Empregado emp){
-
-        System.out.printf("Relação de Hospital que Médicos ou Enfermeiros mantém vínculo\n");
 
         for (Iterator<Hospital> h = Hospital.list().iterator(); h.hasNext();) {
             Hospital hospital = h.next();
@@ -111,4 +137,9 @@ public class Hospital {
             }
         }
     }
+
+    public void inserirInternacao(Internacao internacao){
+        internacoes.add(internacao);
+    }
+
 }
