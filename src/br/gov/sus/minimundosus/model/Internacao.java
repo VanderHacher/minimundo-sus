@@ -23,6 +23,15 @@ public class Internacao {
 
     private List<Enfermeiro> enfermeiros = new ArrayList<Enfermeiro>();
     private List<Medico> medicos = new ArrayList<Medico>();
+    private Medico medicoResponsavel;
+
+    public Medico getMedicoResponsavel() {
+        return medicoResponsavel;
+    }
+
+    public void setMedicoResponsavel(Medico medicoResponsavel) {
+        this.medicoResponsavel = medicoResponsavel;
+    }
     private static List<Internacao> internacoes = new ArrayList<Internacao>();
 
     public Internacao(){}
@@ -122,4 +131,14 @@ public class Internacao {
         return listEmpregado;
     }
 
+    public static List<Internacao> listInternacaoPaciente(Paciente paciente){
+        List<Internacao> internacaoPaciente = new ArrayList<Internacao>();
+        for (Iterator<Internacao> it = internacoes.iterator(); it.hasNext();) {
+            Internacao internacao = it.next();
+            if (internacao.getPaciente().equals(paciente)) {
+                internacaoPaciente.add(internacao);
+            }
+        }
+        return internacaoPaciente;
+    }
 }
